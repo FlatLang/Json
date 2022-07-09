@@ -4,7 +4,7 @@ import "flatlang/datastruct/HashMap"
 import "flatlang/io/File"
 import "flatlang/io/FileReader"
 
-import "flatlang/json/SyntaxStringFunctions"
+import "flatlang/extensions/SyntaxStringFunctions"
 
 class {
     public serialize(Object object) {
