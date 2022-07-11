@@ -52,8 +52,10 @@ class {
     public isDoubleQuoteString(String json) => (let trimmed = json.trim()).first == '"' && trimmed.findEndingQuote(0) == trimmed.count - 1
     public isString(String json) => isSingleQuoteString(json) || isDoubleQuoteString(json)
 
-    public parseObject(String json) => parseObject(json, new HashMap(5,5))
-    public parseObject(String json, var HashMap<String, Object> map) => map {
+    public parseObject(File file) => parseObject(new FileReader(file).readAllContents())
+    public parseObject(File file, HashMap<String, Object> map) => parseObject(new FileReader(file).readAllContents(), map)
+    public parseObject(String json) => parseObject(json, new HashMap(5, 5))
+    public parseObject(String json, HashMap<String, Object> map) => map {
         let trimmed = json.trim()
 
         if (trimmed.first != '{') {
