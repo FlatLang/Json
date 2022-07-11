@@ -7,10 +7,6 @@ import "flatlang/io/FileReader"
 import "flatlang/extensions/SyntaxStringFunctions"
 
 class {
-    public serialize(Object object) {
-
-    }
-
     public parse(File file) => parse(new FileReader(file).readAllContents())
 
     public parse(String json) -> Object {
