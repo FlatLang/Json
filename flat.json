@@ -1,0 +1,21 @@
+{
+  "name": "Json",
+  "version": "0.1.0",
+  "description": "Flat System Library",
+  "author": "Braden Steffaniak",
+  "license": "ISC",
+  "scripts": {},
+  "main": {
+    "source": "src/main",
+    "dependencies": {
+      "github:FlatLang/Compiler-String-Extensions": "master"
+    }
+  },
+  "test": {
+    "mainClass": "flatlang/http/Json_TestSuite",
+    "source": "src",
+    "dependencies": {
+      "github:FlatLang/Nest": "master"
+    }
+  }
+}
